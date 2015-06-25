@@ -1,0 +1,105 @@
+package in.codecamp.tele;
+import java.util.*;
+public class tele {
+
+
+	public static Scanner userInput = new Scanner(System.in);
+	public static void menu()
+	{
+	System.out.println("1. bill");
+	System.out.println("2. portrequest");
+	System.out.println("3. customercare");
+	System.out.println("9. previousmenu");
+	System.out.println("0. exit");	
+	}
+	public static void inside_menu()
+	{
+	menu();
+	userInput.hasNextInt();
+	int choice2 = userInput.nextInt();
+	switch (choice2) {
+	case 1 :
+	System.out.println("bill is 800 rupees");
+	System.out.println("1.To Go back to previous menu press 9");
+	System.out.println("2.To exit press 0");
+	userInput.hasNextInt();
+	int bill_choice = userInput.nextInt();
+	if(bill_choice == 9)
+	{
+	inside_menu();
+	}
+	else if(bill_choice == 0)
+	{
+	System.exit(0);
+	}
+	else
+	{
+	System.out.println("Please Enter a valid choice");
+	}	
+	break;
+	case 2 :
+	System.out.println("portrequest is underprocess");
+	System.out.println("1.To Go back to previous menu press 9");
+	System.out.println("2.To exit press 0");
+	userInput.hasNextInt();
+	int portrequest = userInput.nextInt();
+	if(portrequest == 9)
+	{
+	inside_menu();
+	}
+	else if(portrequest == 0)
+	{
+	System.exit(0);
+	}
+	else
+	{
+	System.out.println("Please Enter a valid choice");
+	}	
+	break;
+	case 3 :
+	System.out.println("customer care are busy learning java");
+	System.out.println("1.To Go back to previous menu press 9");
+	System.out.println("2.To exit press 0");
+	userInput.hasNextInt();
+	int customercare = userInput.nextInt();
+	if(customercare == 9)
+	{
+	inside_menu();
+	}
+	else if(customercare == 0)
+	{
+	System.exit(0);
+	}
+	else
+	{
+	System.out.println("Please Enter a valid choice");
+	}	
+	break;
+	case 9 :
+	System.out.println(" going to previous menu");
+	menu();
+	break;
+	case 0 :
+	System.exit(0);
+	break;
+	default :
+	System.out.println("Please Press one of the above keys");	
+	}	
+
+	}
+	public static void main(String[] args) {
+	 //  restart ;
+	System.out.println("which language user wants to choose");
+	System.out.println("1. English");
+	System.out.println("2. Hindi");
+	userInput.hasNextInt();
+	int choice1 = userInput.nextInt();
+
+	if(choice1 == 1)
+	{
+	inside_menu();
+	}
+	}
+	}
+
+
